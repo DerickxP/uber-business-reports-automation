@@ -1,0 +1,33 @@
+# Sessões de navegador (cookies e tokens). Nunca versionar.
+data/sessions/
+*.session.json
+
+# Dados locais: relatórios baixados, banco, planilha de mapeamento, saídas
+data/
+output/
+demo_output/
+*.db
+*.db-wal
+*.db-shm
+*.csv
+*.xlsx
+
+# Configuração real. Use config.example.json como base.
+config.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+
+# Editores e sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

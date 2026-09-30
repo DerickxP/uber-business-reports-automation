@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>__TITLE__</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+__STYLES__
+  </style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-left">
+    <div class="logo">__LOGO__</div>
+    <div>
+      <h1>__TITLE__</h1>
+      <div class="hdr-sub">__SUBTITLE__</div>
+    </div>
+  </div>
+  <div class="hdr-right">
+    <button id="theme-toggle" class="btn-theme" title="Alternar tema" type="button">
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
+    <div class="pill-live">__BRAND__</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <aside class="sidebar">
+    <div class="sb-hdr">
+      <span class="sb-title">Filtros</span>
+      <button class="btn-clear" id="btn-clear" type="button">Limpar tudo</button>
+    </div>
+    <div class="sb-body">
+      <div class="fg">
+        <div class="fg-lbl">Centro de custo <span class="fg-cnt" id="cnt-cost_center"></span></div>
+        <div class="fl" id="fl-cost_center"></div>
+      </div>
+      <div class="fg">
+        <div class="fg-lbl">Loja / setor <span class="fg-cnt" id="cnt-store"></span></div>
+        <div class="fl" id="fl-store"></div>
+      </div>
+      <div class="fg">
+        <div class="fg-lbl">Mês <span class="fg-cnt" id="cnt-month"></span></div>
+        <div class="fl" id="fl-month"></div>
+      </div>
+      <div class="fg">
+        <div class="fg-lbl">Período <span class="fg-cnt" id="cnt-period"></span></div>
+        <div class="fl" id="fl-period"></div>
+      </div>
+      <div class="fg">
+        <div class="fg-lbl">Usuário <span class="fg-cnt" id="cnt-user"></span></div>
+        <div class="fl" id="fl-user"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <div class="af" id="af">
+      <span class="af-lbl">Ativos:</span>
+      <span class="af-none" id="af-none">Nenhum filtro aplicado</span>
+    </div>
+
+    <div class="no-data" id="no-data">Nenhuma corrida encontrada para os filtros selecionados.</div>
+
+    <section class="kpis">
+      <div class="kpi">
+        <div class="kpi-val" id="k_amount">—</div>
+        <div class="kpi-lbl">Valor total</div>
+        <div class="kpi-d neu">&nbsp;</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-val" id="k_count">—</div>
+        <div class="kpi-lbl">Solicitações</div>
+        <div class="kpi-d neu">&nbsp;</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-val" id="k_ticket">—</div>
+        <div class="kpi-lbl">Ticket médio</div>
+        <div class="kpi-d neu">&nbsp;</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-val" id="k_users">—</div>
+        <div class="kpi-lbl">Usuários únicos</div>
+        <div class="kpi-d neu">&nbsp;</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-val kpi-val-sm" id="k_cmp_label">—</div>
+        <div class="kpi-lbl">Comparativo mensal</div>
+        <div class="kpi-d neu" id="k_cmp_delta">N/A</div>
+      </div>
+    </section>
+
+    <section class="row2">
+      <div class="card">
+        <div class="card-hdr"><span class="card-t">Valor por mês</span><span class="card-h">Clique para filtrar</span></div>
+        <div id="c_amount_month"></div>
+      </div>
+      <div class="card">
+        <div class="card-hdr"><span class="card-t">Solicitações por mês</span><span class="card-h">Clique para filtrar</span></div>
+        <div id="c_count_month"></div>
+      </div>
+    </section>
+
+    <section class="row2">
+      <div class="card">
+        <div class="card-hdr"><span class="card-t">Distribuição por período</span><span class="card-h">Clique para filtrar</span></div>
+        <div id="c_period"></div>
+      </div>
+      <div class="card card-flex">
+        <div class="card-hdr"><span class="card-t">Heatmap por hora</span><span class="card-h">Mais intenso = mais corridas</span></div>
+        <div id="c_hour" class="heat-wrap"></div>
+      </div>
+    </section>
+
+    <section class="row2">
+      <div class="card">
+        <div class="card-hdr"><span class="card-t">Valor por loja / setor</span><span class="card-h">Clique para filtrar</span></div>
+        <div id="c_store"></div>
+      </div>
+      <div class="card">
+        <div class="card-hdr"><span class="card-t">Top usuários por valor</span><span class="card-h">Clique para filtrar</span></div>
+        <div id="c_user"></div>
+      </div>
+    </section>
+
+    <section class="row2">
+      <div class="card">
+        <div class="card-hdr"><span class="card-t">Resumo mensal</span></div>
+        <div class="tw" id="t_monthly"></div>
+      </div>
+      <div class="card">
+        <div class="card-hdr"><span class="card-t">Top usuários</span></div>
+        <div class="tw" id="t_users"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-hdr">
+        <span class="card-t">Detalhamento de rotas</span>
+        <span class="card-h">Até 100 corridas mais recentes dentro dos filtros</span>
+      </div>
+      <div id="t_routes" class="tw tw-tall"></div>
+    </section>
+
+  </main>
+</div>
+
+<script>window.DASHBOARD_DATA = __DATA_JSON__;</script>
+<script>
+__SCRIPT__
+</script>
+</body>
+</html>

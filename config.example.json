@@ -1,0 +1,40 @@
+{
+  "companies": [
+    {
+      "name": "EMPRESA EXEMPLO ATACADO LTDA",
+      "email_keywords": ["EXEMPLO", "ATACADO"]
+    },
+    {
+      "name": "EMPRESA EXEMPLO VAREJO LTDA",
+      "email_keywords": ["EXEMPLO", "VAREJO"]
+    }
+  ],
+  "report": {
+    "period": "previous_month",
+    "last_n_days": 30
+  },
+  "mail": {
+    "provider": "outlook",
+    "url": "https://outlook.office.com/mail/",
+    "subject": "Seu arquivo foi exportado e esta pronto",
+    "wait_max_seconds": 300,
+    "retry_interval_seconds": 15
+  },
+  "browser": {
+    "headless": false,
+    "locale": "pt-BR"
+  },
+  "paths": {
+    "downloads": "data/downloads",
+    "sessions": "data/sessions",
+    "database": "data/rides.db",
+    "mapping_workbook": "data/mapping.xlsx",
+    "dashboard": "output/dashboard.html"
+  },
+  "dashboard": {
+    "title": "Uber Corporativo",
+    "subtitle": "Dashboard de corridas",
+    "brand": "Minha Empresa",
+    "logo": null
+  }
+}
