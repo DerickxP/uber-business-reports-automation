@@ -10,9 +10,9 @@ Pipeline ponta a ponta que **solicita e baixa os relatórios de viagens do Uber 
 para várias empresas, **consolida tudo em SQLite** de forma idempotente e **gera um dashboard
 interativo em um único arquivo HTML**, sem servidor e sem bibliotecas externas.
 
-> Este repositório é uma reconstrução, com dados sintéticos, de uma automação que desenvolvi
-> em contexto corporativo. Nenhum dado real, nome de empresa, credencial ou sessão faz parte
-> do código ou do histórico. A demonstração roda inteira sem acesso a nenhum portal.
+> Projeto de portfólio sobre um cenário hipotético: empresas fictícias que usam o Uber for
+> Business e precisam consolidar seus relatórios. Todos os dados são sintéticos e gerados pelo
+> próprio projeto; nenhuma credencial ou sessão faz parte do código. A demonstração roda inteira sem acesso a nenhum portal.
 
 ![Dashboard gerado a partir de dados sintéticos: KPIs, filtros cruzados, gráficos SVG e heatmap por hora](docs/dashboard.png)
 
