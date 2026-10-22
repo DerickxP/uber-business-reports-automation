@@ -6,6 +6,8 @@
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?logo=sqlite&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+**[▶ Ver o dashboard ao vivo](https://derickxp.github.io/uber-business-reports-automation/)**, gerado pelo GitHub Actions a partir dos dados sintéticos da demo.
+
 Pipeline ponta a ponta que **solicita e baixa os relatórios de viagens do Uber for Business**
 para várias empresas, **consolida tudo em SQLite** de forma idempotente e **gera um dashboard
 interativo em um único arquivo HTML**, sem servidor e sem bibliotecas externas.
